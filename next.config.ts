@@ -7,7 +7,15 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/api/auth/:path*",
-        destination: `${apiUrl}/api/auth/:path*`,
+        destination: `${apiUrl}/api/admin-auth/:path*`,
+      },
+      {
+        source: "/api/admin/projects/:path*",
+        destination: `${apiUrl}/api/admin/projects/:path*`,
+      },
+      {
+        source: "/api/admin/projects",
+        destination: `${apiUrl}/api/admin/projects`,
       },
     ];
   },
